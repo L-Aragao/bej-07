@@ -1,0 +1,15 @@
+{
+  "name": "modulos_externos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "consome_api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Aragao",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

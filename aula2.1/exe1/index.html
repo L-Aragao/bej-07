@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exe</title>
+</head>
+<body>
+    <script>
+        const nome = prompt('Digite seu nome:')
+        document.body.innerHTML += `Seu nome é: <strong>${nome}</strong><br />`;
+        document.body.innerHTML += `Seu nome tem <strong>${nome.length}</strong> letras<br />`;
+        document.body.innerHTML += `Seu nome tem <strong>${nome.replaceAll(' ', '').length}</strong> letras<br />`;
+        document.body.innerHTML += `A segunda letra do nome é <strong>${nome[1]}</strong> <br />`;
+        document.body.innerHTML += `O indice da primeira letra A do nome é <strong>${nome.indexOf('A')}</strong> <br />`;
+        document.body.innerHTML += `O indice da ultima letra A do nome é <strong>${nome.toUpperCase().lastIndexOf('A')}</strong> <br />`;
+        document.body.innerHTML += `Ultimas 3 letras do <strong>${nome.slice(-3, nome.length)}</strong> <br />`;
+        document.body.innerHTML += `Palvras do meu nome <strong>${nome.split(' ')}</strong> <br />`;
+        document.body.innerHTML += `O Meu nome maisculo <strong>${nome.toUpperCase()}</strong> <br />`;
+    </script>
+    
+</body>
+</html>

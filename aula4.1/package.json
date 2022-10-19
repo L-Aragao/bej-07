@@ -1,0 +1,14 @@
+{
+  "name": "aula4.1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node modB",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,44 @@
+/**
+  *Configurar o projeto com NPM
+  */
+npm init ou npm init -y
+
+/**
+  *Instalar depencias
+  */ 
+
+npm install <module-name>
+npm i <module-name>
+//defini instalacao para prod
+npm install <module-name> --save-prod
+//defini instalacao para dev  
+npm install <module-name> --save-dev
+
+install or i (mesma coisa)
+-dev ou -D para instalar um depencia de Desenvolvimento
+-prod util para passar um depencia de Desenvolvimento para depencia
+
+/**
+  *configurando projeto com TypeScript e express
+  */    
+npm init -y
+npm install typescript -D
+npx tsc --init
+npm install express
+npx tsc (apos atualizar o package.json, o tsconfing.json)
+    *o comando de cimea ja faz, mas caso precise:
+        npx <nome_do_arquivo>.ts (transpile do arquivo e suas depencias para js)
+
+/**
+  * Alterar no arquivos package.json, na parte script
+  */
+  "start": "npx tsc && node ./dist/index.js"
+
+
+/**
+  * Bonus 
+  *Instalar e rodar o ts-node-dev (https://www.npmjs.com/package/ts-node-dev)
+  */
+
+npm install ts-node-dev -D
+ts-node-dev --respawn --transpile-only <nome_do_arquivo>.ts
