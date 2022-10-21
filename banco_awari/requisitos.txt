@@ -1,0 +1,26 @@
+- controlar a carteira
+    - consultas
+        .saldo
+        .extrato
+    - Transacoes
+        .deposito
+        .saque
+        .transferencia TED/ PIX
+
+- Gestao de contas/usuario bancarias
+    - dados cliente
+        .dados bancarios
+    - criar e modificar contas bancarias
+        .tipo de contas
+
+
+- sistema consumir a api de PIX do Bacen
+    - Disponibilza dos dados PIX
+        .consultar/ validar chave
+    - Notificar transacao
+        .valor
+        .tipo
+        .documento    
+    - Lista de bancos
+
+
