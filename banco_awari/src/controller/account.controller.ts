@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
-// import AccountService from "../service/account.service";
+import AccountService from "../service/account.service";
 
 
 export default class AccountController{
@@ -13,6 +13,7 @@ export default class AccountController{
     create = (req: Request, res: Response) => {
 
     }
+
 
     createAccount = (req: Request, res: Response) => {
 

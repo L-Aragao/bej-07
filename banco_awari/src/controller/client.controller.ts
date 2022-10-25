@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
-// import ClientService from "../service/client.service";
+import ClientService from "../service/client.service";
 
 
 export default class ClientController{
