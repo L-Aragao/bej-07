@@ -1,0 +1,24 @@
+- Arquitetura de Software: *CONCEITOS
+ .Microserviços
+ .Monolito
+ .DDD - Dominios
+
+- TESTES: 
+    unitarios, integrados, Regressivos, carga, etc *Conceitos
+    .como dev: Unitario e Integraçao *Dominar
+
+-  Segurança:
+    Autenticacao - Auth, JWT *Conceito
+    OWASP *Conceito
+
+- SOLID e KISS *Dominar
+    Orientado a objeto - Typescript
+
+- API *Dominar
+    .Restful - PRINCIPAL
+    .Graphql - queries
+
+- Banco de Dados *Dominar
+    .SQL - CENARIO TRANSACIONAL
+    .NO_SQL - CENARIO DE CONSUMO - LEITURA
+    .ORM
