@@ -1,26 +1,28 @@
 import ClientDTO from "../interface/client.dto";
+import ClientEntity from "../repository/client.entity";
 
-class ClientService{
-    clientEntity: any;
+
+export default class ClientService{
+    clientEntity: ClientEntity;
 
     constructor(){
-        this.clientEntity = 'Instanciar a entidade';
+        this.clientEntity = new ClientEntity();
     }
 
-    createClient = async (newClient : ClientDTO) => {
+    async  createClient (newClient : ClientDTO): Promise<ClientDTO[]> {
         const client = await this.clientEntity.create(newClient);
         return [client];
     }
 
     findClientByDocument = async (document: string) => {
-        const client = await this.clientEntity.findById(document);
+        const client = await this.clientEntity.findByDocument(document);
         return [client];
     }
 
-    findClients = async () => {
-        const clients = await this.clientEntity.findClients();
-        return clients;
-    }
+    // findClients = async () => {
+    //     const clients = await this.clientEntity.findClients();
+    //     return clients;
+    // }
 
     updateClient = async (client: ClientDTO) => {
         const updatedClient = await this.clientEntity.update(client);
@@ -28,9 +30,7 @@ class ClientService{
     }
 
     deleteClientById = async (client: ClientDTO) => {
-        await this.clientEntity.delete(client.id_cliente)
+        await this.clientEntity.delete(client)
     }
 
-}
-
-export default ClientService;
+};

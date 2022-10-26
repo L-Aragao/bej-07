@@ -1,4 +1,4 @@
-export default interface ClientDTO{
+export default interface AccountDTO{
     id_conta?: number,
     id_cliente: number,
 	tipo: string,

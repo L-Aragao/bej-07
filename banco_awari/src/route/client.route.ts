@@ -1,12 +1,14 @@
 import { Router } from "express";
 import ClientController from '../controller/client.controller';
+import ClientService from "../service/client.service";
 
 const routes = Router();
-const clientController = new ClientController('alguma coisa');
+const clientController = new ClientController(new ClientService);
 
 
 routes.get('/clients', clientController.read);
-routes.get('/clients/client', clientController.readClient);
+routes.get('/clients/client', clientController.readClient); //?documento
+routes.get('/clients/client/:documento', clientController.readClient);
 
 routes.put('/clients', clientController.update);
 routes.put('/clients/client', clientController.updateClient);

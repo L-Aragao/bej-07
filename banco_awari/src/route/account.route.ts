@@ -1,8 +1,9 @@
 import { Router } from "express";
 import AccountController from '../controller/account.controller';
+import AccountService from "../service/account.service";
 
 const routes = Router();
-const accountController = new AccountController('Alguma coisa');
+const accountController = new AccountController(new AccountService);
 
 routes.get('/accounts', accountController.read);
 routes.get('/accounts/account', accountController.readAccount);

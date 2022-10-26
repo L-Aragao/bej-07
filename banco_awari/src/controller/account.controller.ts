@@ -3,15 +3,19 @@ import { StatusCodes } from "http-status-codes";
 import AccountService from "../service/account.service";
 
 
-export default class AccountController{
-    private accountService: any;
+export default class AccountController {
+    private accountService: AccountService;
 
-    constructor(accountService: any){
+    constructor(accountService: AccountService) {
         this.accountService = accountService;
     }
 
     create = (req: Request, res: Response) => {
+        try {
 
+        } catch (error) {
+
+        }
     }
 
 
@@ -28,7 +32,11 @@ export default class AccountController{
     }
 
     readAccount = (req: Request, res: Response) => {
+        try {
 
+        } catch (error) {
+
+        }
     }
 
     readBalance = (req: Request, res: Response) => {

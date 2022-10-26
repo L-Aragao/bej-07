@@ -4,6 +4,7 @@
   "description": "exercico criacao de api bancaria",
   "main": "app.js",
   "scripts": {
+    "start": "ts-node-dev --respawn ./src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

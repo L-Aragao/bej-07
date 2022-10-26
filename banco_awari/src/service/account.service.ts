@@ -1,10 +1,14 @@
-import AccountDTO from "../interface/account.dto"
+import AccountDTO from "../interface/account.dto";
+import AccountEntity from "../repository/account.entity";
+import connection from "../repository/connection";
+
 
 class AccountService{
-    accountEntity: any;
+    accountEntity: AccountEntity;
 
+    //Estamos ferindo o DI - Injeçao de dependencia
     constructor(){
-        this.accountEntity = 'Instanciar a entidade';
+        this.accountEntity = new AccountEntity(connection);
     }
 
     createAccount = async (newAccount : AccountDTO) => {
@@ -12,15 +16,15 @@ class AccountService{
         return [account];
     }
 
-    findAccountById = async (id : Number) => {
+    findAccountById = async (id : AccountDTO["id_conta"]) => {
         const account = await this.accountEntity.findById(id);
-        return [account];
+        return account;
     }
 
-    findAccounts = async () => {
-        const accounts = await this.accountEntity.findAccounts();
-        return accounts;
-    }
+    // findAccounts = async () => {
+    //     const accounts = await this.accountEntity.findAccounts();
+    //     return accounts;
+    // }
 
     updateAccount = async (account: AccountDTO) => {
         const updatedAccount = await this.accountEntity.update(account);
@@ -28,7 +32,7 @@ class AccountService{
     }
 
     deleteAccountById = async (account: AccountDTO) => {
-        await this.accountEntity.delete(account.id)
+        await this.accountEntity.delete(account)
     }
 
 }
